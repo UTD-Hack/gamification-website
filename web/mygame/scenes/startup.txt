@@ -19,6 +19,7 @@
 *author Jason Jiang and Cam Perry
 *scene_list
   startup
+  transportation
   death
 
 *create Savings 100000
