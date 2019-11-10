@@ -123,10 +123,10 @@ function keyDown(event) {
         var sel = text.value.slice(ss,se).replace(/\n/g,"\n"+tab);
         var post = text.value.slice(se,text.value.length);
         text.value = pre.concat(tab).concat(sel).concat(post);
-        
+
         moveSelection(tab.length);
     }
-           
+
     // "Normal" case (no selection or selection on one line only)
     else {
         text.value = text.value.slice(0,ss).concat(tab).concat(text.value.slice(ss,text.value.length));
@@ -157,7 +157,7 @@ function bindEvent(target, eventName, fun) {
     target.addEventListener(eventName, fun, true);
   } else {
     target.attachEvent("on" + eventName, function(){ fun(event); });
-  } 
+  }
 }
 
 window.onload = function() {

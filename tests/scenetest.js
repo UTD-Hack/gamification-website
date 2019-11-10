@@ -150,7 +150,7 @@ test("nestedConditionalTrue", function() {
     doh.is([{group:"choice",endLine:6,name:"foo",line:4},{group:"choice",endLine:9,name:"bar",line:7}], options, "options");
 })
 test("multi", function() {
-    var text = 
+    var text =
         "*choice color toy\n"+
         "  #red\n"+
         "    #spaceship\n"+
@@ -184,7 +184,7 @@ test("multi", function() {
 })
 
 test("multi partially unselectable", function() {
-    var text = 
+    var text =
         "*choice color toy\n"+
         "  #red\n"+
         "    #spaceship\n"+
@@ -268,7 +268,7 @@ test("errorNoBodyMultiChoice", function() {
     doh.assertError(Error, scene, "parseOptions", [0, ["one", "two"]], "Expected choice body");
 })
 test("errorNonOverlappingMultiChoice", function() {
-    var text = 
+    var text =
         "*choice color toy\n"+
         "  #red\n"+
         "    #wagon\n"+
@@ -286,7 +286,7 @@ test("errorNonOverlappingMultiChoice", function() {
     doh.assertError(Error, scene, "parseOptions", [0, ["color", "toy"]], "Mismatched suboptions");
 })
 test("errorNonOverlappingMultiChoice2", function() {
-    var text = 
+    var text =
         "*choice color toy\n"+
         "  #red\n"+
         "    #wagon\n"+
@@ -1026,7 +1026,7 @@ var tokenizerTests = {
     ,'3.0': [{"value":"3.0","name":"NUMBER","pos":3}]
     ,'bar="blah"': [{"value":"bar","name":"VAR","pos":3},{"value":"=","name":"EQUALITY","pos":4},{"value":"\"blah\"","name":"STRING","pos":10}]
     ,'foo=2': [{"value":"foo","name":"VAR","pos":3},{"value":"=","name":"EQUALITY","pos":4},{"value":"2","name":"NUMBER","pos":5}]
-    
+
     ,'foo%+50': [{"value":"foo","name":"VAR","pos":3},{"value":"%+","name":"FAIRMATH","pos":5},{"value":"50","name":"NUMBER","pos":7}]
     ,'"2"/2': [{"value":"\"2\"","name":"STRING","pos":3},{"value":"/","name":"OPERATOR","pos":4},{"value":"2","name":"NUMBER","pos":5}]
     ,'(foo=2) or (foo=3)': [{"value":"(","name":"OPEN_PARENTHESIS","pos":1},{"value":"foo","name":"VAR","pos":4},{"value":"=","name":"EQUALITY","pos":5},{"value":"2","name":"NUMBER","pos":6},{"value":")","name":"CLOSE_PARENTHESIS","pos":7},{"value":"or","name":"NAMED_OPERATOR","pos":10},{"value":"(","name":"OPEN_PARENTHESIS","pos":12},{"value":"foo","name":"VAR","pos":15},{"value":"=","name":"EQUALITY","pos":16},{"value":"3","name":"NUMBER","pos":17},{"value":")","name":"CLOSE_PARENTHESIS","pos":18}]
