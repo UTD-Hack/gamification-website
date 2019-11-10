@@ -1,0 +1,43 @@
+What form of transportation do you plan on using?
+*choice
+  #Buying a Car
+    It costs $20,000 to buy a car, but it sure is a lot more comfortable to riding a car than a public bus. Do you plan on using your savings to pay for it or use debt to pay for it?
+    *set Comfort +20
+    *choice
+      #Loan
+        You take out $20,000 loan to pay for it.
+        *set Debt +20000
+        *finish
+      #Savings
+        You take $20,000 out of your savings account to pay for it.
+        *set Savings -20000
+        *finish
+  #Paying for weekly public transportation.
+    It only costs $20 per week, which is a really good deal. Another week has gone by. Do you plan on continuing using public transporation or do you want to buy a car?
+    *set Savings -20
+    *choice
+      #Continue using public transportation
+        You pay another $20 for transportation. Oh no! You suddenly come home with a flu and feel really badly! Apparently, someone sitting next to you on the bus gave you the flu. What do you do?
+        *set Savings -20
+        *set Health -20
+        *Choice
+          #Go see the doctor and pay $1000 because you don't have health insurance.
+            You end up feeling a lot better.
+            *set Health +15
+            *set Savings -1000
+            *finish
+          #Ignore it.
+            A few weeks go by. You feel a lot worse now and end up throwing up multiple times.
+            *set Health -15
+            *finish
+      #Buy a $20,000 car
+        How do you plan on paying for it?
+        *choice
+          #Through loan
+            You take out $20,000 loan to pay for it.
+            *set Debt +20000
+            *finish
+          #Through savings
+            You take $20,000 out of your savings account to pay for it.
+            *set Savings -20000
+            *finish
