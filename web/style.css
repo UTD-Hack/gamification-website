@@ -30,7 +30,6 @@ a {
 
 
 div#container1.container {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,7 +273,10 @@ div #main {
   align-items: center;
 }
 
-.next {
+div #text {
+  font-family: 'Montserrat', sans-serif;
+}
+!important button.next {
     clear: both;
     display:block;
     width:25%;
@@ -307,9 +309,17 @@ h1 {
   font-weight: normal;
 }
 
+h1.gameTitle {
+  font-family: 'Merriweather', serif;
+}
+
 h2 {
   font-size: 1.125em;
   font-weight: normal;
+}
+
+h2#author.gameTitle {
+  font-family: 'Merriweather', serif;
 }
 
 #identity {
@@ -498,4 +508,13 @@ body.whitemode .next:hover {
     max-width: 45%;
   }
 
+}
+
+.btn.btn-primary {
+  border: none;
+  background: #669966;
+}
+
+.btn.btn-primary:hover {
+  background: #99CC00;
 }
