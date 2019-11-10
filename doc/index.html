@@ -19,7 +19,7 @@
 
 <code><pre>  Your majesty, your people are starving in the streets, and threaten revolution.
   Our enemies to the west are weak, but they threaten soon to invade.  What will you do?
-  
+
   *choice
     #Make pre-emptive war on the western lands.
       If you can seize their territory, your kingdom will flourish.  But your army's
@@ -187,30 +187,30 @@ Option 1 has four spaces, but Option 2 has six spaces; since these don't line up
       ,"variables"
       ,"ending"
       ,"death"
-      
+
   ]);
-  
+
   // Specify the default starting stats here
-  
+
   stats = {
       leadership: 50
       ,strength: 50
   };
-  
+
   // Specify the stats to use in debug mode
-  
+
   debugStats = {
       leadership: 50
       ,strength: 50
   };
-  
+
   // or just use defaults
   // debugStats = stats</code></pre>
 
 <p>The first section defines the scene "navigator," which describes how we move from scene to scene.  If you <code>*finish</code> in the "startup" scene, we'll move right ahead to the "animal" scene, then the "variables" scene.  Finally, we reach the ending scene. Here's an example ending scene:</p>
 
 <pre><code>  This is the last scene!  The game is over!
-  
+
   *ending</code></pre>
 
 <p>That final <code>*ending</code> command instructs the game to insert a "Play Again" button at the end of the scene.  If you choose to "Play Again", the game will begin again at the "startup" scene.</p>
@@ -226,7 +226,7 @@ Option 1 has four spaces, but Option 2 has six spaces; since these don't line up
       You lift the weights.
       *finish
     You drop the weights and hurt yourself badly.  You never recover.
-    
+
     *goto_scene death</code></pre>
 
 <p>When this happens, we jump directly to the death scene.  This allows you to provide a standard "death" message without copying and pasting all over the game.</p>

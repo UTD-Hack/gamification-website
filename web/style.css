@@ -261,7 +261,7 @@ input[type=email],input[type=password] {
     font-family: -apple-system, sans-serif; /* reset, for Android */
     margin: 1rem 0; /* reset button margin */
     -webkit-appearance: none; /* Safari, don't override my CSS styles */
-    color: #f7f4f1; /* Match background color */ 
+    color: #f7f4f1; /* Match background color */
     background-color: #626160;
     border: none;
     -webkit-border-radius: 0.5em;
@@ -313,6 +313,9 @@ h2 {
 
 .spacedLink {
   margin-right:0.5em;
+  border-radius: 15%;
+  border: none;
+  cursor: pointer;
 }
 
 .spacedLink:last-child {
@@ -446,7 +449,7 @@ body.whitemode .next:hover {
   .definition{
     display: none;
   }
-  
+
   #headerLinks {
     line-height: 2; /* For tapability */
   }
@@ -458,11 +461,11 @@ body.whitemode .next:hover {
   #advertisement {
     margin: -8px;
   }
-  
+
   .mobileBadges {
     float: none;
   }
-  
+
   #header {
     margin-top: 30px;
   }
@@ -471,5 +474,5 @@ body.whitemode .next:hover {
   #text .alignleft, #text .alignright {
     max-width: 45%;
   }
-  
+
 }

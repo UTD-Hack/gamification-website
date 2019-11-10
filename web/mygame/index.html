@@ -5,7 +5,7 @@ Copyright 2010 by Dan Fabulich.
 
 Dan Fabulich licenses this file to you under the
 ChoiceScript License, Version 1.0 (the "License"); you may
-not use this file except in compliance with the License. 
+not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
  http://www.choiceofgames.com/LICENSE-1.0.txt
@@ -37,6 +37,9 @@ either express or implied.
 <script src="mygame.js"></script>
 <link href="../alertify.css" rel="stylesheet" type="text/css">
 <!--[if IE 6]><style>.alertify-logs { position: absolute; }</style><![endif]-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <script>
 // INSERT store name; disabled by default because it's confusing for newbie authors
@@ -58,11 +61,11 @@ var rootDir = "../";
       <!-- <a href="credits.html" id="aboutLink" class="spacedLink">About</a> -->
     </p>
   <p id="buttons">
-    <button id="statsButton" class="spacedLink" onclick="showStats()">Show Stats</button>
-    <button id="restartButton" class="spacedLink" onclick="restartGame('prompt')">Restart</button>
+    <button id="statsButton" class="btn btn-primary" onclick="showStats()">Show Stats</button>
+    <button id="restartButton" class="btn btn-primary" onclick="restartGame('prompt')">Restart</button>
     <button id="achievementsButton" onclick="showAchievements()" class="spacedLink" style="display: none">Achievements</button>
     <button id="bugButton" onclick="reportBug()" class="spacedLink" style="display: none">Report Bug</button>
-    <button id="menuButton" onclick="textOptionsMenu()" class="spacedLink">Settings</button>
+    <button id="menuButton" onclick="textOptionsMenu()" class="btn btn-primary">Settings</button>
   </p>
 </div>
 <div id="main">
@@ -74,9 +77,6 @@ startLoading();
 </div>
 <div id="mobileLinks" class="webOnly">
 </div>
-<noscript>
-<p>This game requires JavaScript; please enable JavaScript and refresh this page.</p>
-</noscript>
-<a id="makeyourowngames" href="https://www.choiceofgames.com/make-your-own-games/choicescript-intro/">Make your own games with ChoiceScript</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </body>
 </html>
