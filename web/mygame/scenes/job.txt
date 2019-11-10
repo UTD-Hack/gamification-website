@@ -1,0 +1,38 @@
+Get job with no degree or invest in education?
+*choice
+  #Get job immediately
+    Not a bad choice. You will be able to make money to cover up your debts! Be wary though that an education may help you get a better and more stable job in the future though. What job do you want to get?
+    *Choice
+      #Cashier at Target
+        Congrats! You are now officially a cashier at the local Target store. You will be making $5000 on a monthly basis. The first payment has just been transferred into your savings account!
+        *set Savings +5000
+        *set Financial_Status (Savings/(Savings + Debt))*100
+        
+        Just want to remind you that you have $${Savings} in savings and $${Debt} in debt
+        *finish
+      #Waiter/waitress at Olive Garden
+        Congrats! You are now officially a waiter/waitress at the local Olive Garden. You will be making $5000 on a monthly basis. The first payment has just been transferred into your savings account!
+        *set Savings +5000
+        *set Financial_Status (Savings/(Savings + Debt))*100
+        
+        Just want to remind you that you have $${Savings} in savings and $${Debt} in debt
+        *finish
+  #Invest in education
+    Even though you may not earn any money currently, you will see your hard work pay off! What do you want to study?
+    *Choice
+      #Pay for coding bootcamp
+        Good choice. Even though you racked up $20,000 in debt, you have finally found a well-paying software engineering job! You earn back $15,000 in the first month.
+        *set Savings +15000
+        *set Debt +20000
+        *set Financial_Status (Savings/(Savings + Debt))*100
+        
+        Just want to remind you that you have $${Savings} in savings and $${Debt} in debt
+        *finish
+      #Major in business at a local college
+        Good choice. Even though you racked up $40,000 in debt, you finally found a well paying job as a product manager! You earn $15,000 in the first month.
+        *set Savings +15000
+        *set Debt +40000
+        *set Financial_Status (Savings/(Savings + Debt))*100
+        
+        Just want to remind you that you have $${Savings} in savings and $${Debt} in debt
+        *finish

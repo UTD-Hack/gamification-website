@@ -20,31 +20,36 @@
 *scene_list
   startup
   transportation
-  death
+  job
+  vacation
+  finale
 
 *create Savings 100000
 *create Debt 0
 *create Comfort 50
 *create Health 50
-*create Financial_Status 50
+*create Financial_Status 100
 
 Welcome to Smart Savings, a game to teach you about finance literacy!
 
 *page_break
 
-Day 1: You are starting out with $100,000 in your savings account. How do you plan on buying a house?
+You are starting out with $100,000 in your savings account. How do you plan on buying a house?
 
 *choice
   #Use mortgage to cover up your costs
     You will be $50,000 in debt
     *set Debt +50000
+    *set Financial_Status (Savings/(Savings + Debt))*100
     *finish
   #Buy it with your own money
     $50,000 has sucessfully been deducted from your savings account
     *set Savings -50000
+    *set Financial_Status (Savings/(Savings + Debt))*100
     *finish
   #Rent out an apartment
     It isn't as comfortable as a house, but this'll still work. Luckily, only $2,000 have been deducted from my savings account.
     *set Savings -2000
     *set Comfort -15
+    *set Financial_Status (Savings/(Savings + Debt))*100
     *finish

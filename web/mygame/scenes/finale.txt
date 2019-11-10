@@ -1,0 +1,73 @@
+It is finally time to analyze your finances! How well do you think you fared?
+*page_break
+*if Debt = 0
+  Congratulations! You have no debt!
+  
+  You ended up with $${Savings} in savings and $${Debt} in debt!
+  In addition, you have ${Comfort}% in comfort, ${Health}% in health, and ${Financial_Status}% in financial status!
+
+  Compete with your friends and see how well you fared with others!
+
+  *finish
+
+*else
+  Oh no! You still have debt left! Do you plan on paying back the debt? Keep in mind that debt does rack up really quickly and can make you pay 2-3 times more than what you owe.
+  *choice
+    #Yes
+      *if Debt < Savings
+        Your debt is less than your savings! You will be able to pay off all your debt! It is recommended to pay off as much debt as you can. How much debt do you want to pay off?
+        *choice
+          #I want to pay off all of my debt
+            *set Savings Debt
+            *set Debt 0
+            You ended up with $${Savings} in savings and $${Debt} in debt!
+            In addition, you have ${Comfort}% in comfort, ${Health}% in health, and ${Financial_Status}% in financial status!
+            It is great you ended up with no debt, which was able to positively boost your overall financial status score.
+            
+            Compete with your friends and see how well you fared with others!
+            *finish
+
+          #I only want to pay off half of my debt.
+            Having some debt did have a negative impact on your overall financial status score because of the fee from carrying over debt, but at least you were able to cover half of your debt!
+            *set Savings -(Debt*0.5)
+            *set Debt (Debt*0.5)
+            *set Debt (Debt*1.5)
+            You ended up with $${Savings} in savings and $${Debt} in debt!
+            In addition, you have ${Comfort}% in comfort, ${Health}% in health, and ${Financial_Status}% in financial status!
+            
+            Compete with your friends and see how well you fared with others!
+            *finish
+
+      *else
+        Your debt is more than your savings! Although you won't be able to pay all of your debt, it is best to pay off as much debt as possible. How much debt do you want to pay off?
+          *choice
+          #I want to pay off as much debt as I can.
+            *set Debt -Savings
+            *set Savings 0
+            *set Debt (Debt*1.5)
+            It is great that you tried to pay for as much debt as possible, which was able to reduce your financial status score from dipping and paying more debt from the fees when debt is carried over.
+            You ended up with $${Savings} in savings and $${Debt} in debt!
+            In addition, you have ${Comfort}% in comfort, ${Health}% in health, and ${Financial_Status}% in financial status!
+            
+            Compete with your friends and see how well you fared with others!
+            *finish
+
+          #I only want to use half of my savings to pay for debt.
+            *set Debt -(Savings*0.5)
+            *set Savings (Savings*0.5)
+            *set Debt (Debt*1.5)
+            You ended up with $${Savings} in savings and $${Debt} in debt!
+            In addition, you have ${Comfort}% in comfort, ${Health}% in health, and ${Financial_Status}% in financial status!
+            Having some debt, did have a negative impact on your overall financial status score because of the fees charged when debt is carried over, but at least you were able to pay for some debt!
+            
+            Compete with your friends and see how well you fared with others!
+            *finish
+
+    #No
+      *set Debt (Debt*1.5)
+      You ended up with $${Savings} in savings and $${Debt} in debt!
+      In addition, you have ${Comfort}% in comfort, ${Health}% in health, and ${Financial_Status}% in financial status!
+      Since you did not try to pay back debt, debt has had a detrimental impact on your overall financial status score since there was even more debt due to the fees carried over from debt.
+        
+      Compete with your friends and see how well you fared with others!
+        *finish

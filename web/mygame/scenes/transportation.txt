@@ -7,10 +7,12 @@ What form of transportation do you plan on using?
       #Loan
         You take out $20,000 loan to pay for it.
         *set Debt +20000
+        *set Financial_Status (Savings/(Savings + Debt))*100
         *finish
       #Savings
         You take $20,000 out of your savings account to pay for it.
         *set Savings -20000
+        *set Financial_Status (Savings/(Savings + Debt))*100
         *finish
   #Paying for weekly public transportation.
     It only costs $20 per week, which is a really good deal. Another week has gone by. Do you plan on continuing using public transporation or do you want to buy a car?
@@ -25,10 +27,12 @@ What form of transportation do you plan on using?
             You end up feeling a lot better.
             *set Health +15
             *set Savings -1000
+            *set Financial_Status (Savings/(Savings + Debt))*100
             *finish
           #Ignore it.
             A few weeks go by. You feel a lot worse now and end up throwing up multiple times.
             *set Health -15
+            *set Financial_Status (Savings/(Savings + Debt))*100
             *finish
       #Buy a $20,000 car
         How do you plan on paying for it?
@@ -36,8 +40,10 @@ What form of transportation do you plan on using?
           #Through loan
             You take out $20,000 loan to pay for it.
             *set Debt +20000
+            *set Financial_Status (Savings/(Savings + Debt))*100
             *finish
           #Through savings
             You take $20,000 out of your savings account to pay for it.
             *set Savings -20000
+            *set Financial_Status (Savings/(Savings + Debt))*100
             *finish
